@@ -4,10 +4,10 @@ public class AccountOperations {
         return a;
     }
 
-    public static Account createNewAccount() {
+    public static Account createNewAccount(String accountName, String description) {
         Account a = new Account();
-        a.Name = 'Vishal';
-        a.Description = 'Default Description';
+        a.Name = accountName;
+        a.Description = description;
         insert a;
         return a;
     }

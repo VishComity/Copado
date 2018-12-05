@@ -5,7 +5,7 @@ public class AccountOperationsTest {
         Test.startTest();
         Account acc = new Account(Name='Test Account');
         Database.SaveResult result = Database.insert(acc);
-        Account a = AccountOperations.createNewAccount();
+        Account a = AccountOperations.createNewAccount('New Vish Account', 'New Description');
         
         Test.stopTest();
         // Verify
@@ -13,8 +13,8 @@ public class AccountOperationsTest {
         System.assertEquals('Default Description', savedAcc.Description);
  
         // Verify
-        savedAcc = [SELECT Name FROM Account WHERE Name = 'Vishal'];
-        System.assertEquals('Vishal', savedAcc.Name);
+        savedAcc = [SELECT Name FROM Account WHERE Name = 'New Vish Account'];
+        System.assertEquals('New Vish Account', savedAcc.Name);
         
     }
 }
