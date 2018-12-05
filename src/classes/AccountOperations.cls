@@ -3,4 +3,13 @@ public class AccountOperations {
         a.Description = 'Default Description';
         return a;
     }
+
+    public static Account createNewAccount() {
+        Account a = new Account();
+        a.Name = 'Vishal';
+        a.Description = 'Default Description';
+        insert a;
+        return a;
+    }
+    
 }
